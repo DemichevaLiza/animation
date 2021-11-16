@@ -4,7 +4,28 @@
   display: block;
   position: relative;
   background: url('file:///C:/Users/Dell/Desktop/Все%20папки/вшэ/веб%20вёрстка/animation/image/mario-walk-n-jump-68.png');
-  animation: walk .4s steps(1)  infinite;
+  animation: walk 0.4s steps(1)  infinite;
+}
+
+.mario2 {
+  width: 68px;
+  height: 68px;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  background: url('file:///C:/Users/Dell/Desktop/Все%20папки/вшэ/веб%20вёрстка/animation/image/mario-walk-n-jump-68.png');
+  animation: jump 1s steps(1);
+}
+
+@keyframes jump {
+  0% {background-position:   -272px top; opacity: 0%;}
+  60% {background-position:  -272px top; opacity: 100%;}
+  62% {background-position:  -272px top; opacity: 100%;}
+  70% {background-position:  -340px top; opacity: 100%;}
+  72% {background-position:  -340px top; opacity: 100%;}
+  100% {background-position:  -340px top; opacity: 0%;}
 }
 
 
@@ -27,14 +48,72 @@
 @keyframes path {
   0%{left: -68px; top;}
   25%{left: 30%; top: 200px;}
-  50%{left: 50%; top: 100px;}
+  50%{left: 50%; top: 150px;}
   55%{left: 56%; top: 200px;}
   100%{left: 100%;}
 }
 
-.blast {width: 68px;
-height: -68px;
+.blast{
+width: 151px;
+height: 151px;
 display: block;
-position: relative;
+position: absolute;
 background: url('file:///C:/Users/Dell/Desktop/Все%20папки/вшэ/веб%20вёрстка/animation/image/blast-151.png');
+left: 50%;
+animation: blast 1s steps(1)  infinite;
+animation-play-state: paused;
+}
+
+.blast:hover {
+  animation-play-state: running;
+}
+
+@keyframes blast{
+  0%{background-position:   0px 0px;}
+  3%{background-position:  -151px 0px;}
+  6% {background-position:  -302px 0px;}
+  27% {background-position:  -453px 0px;}
+  30% {background-position:   -604px 0px;}
+  33% {background-position:  -755px 0px;}
+  36% {background-position:  -906px 0px;}
+  39% {background-position:  -1057px 0px;}
+
+  42% {background-position:    0px -151px;}
+  45% {background-position:  -151px -151px;}
+  47% {background-position:  -302px -151px;}
+  50% {background-position:  -453px -151px;}
+  53% {background-position:   -604px -151px;}
+  56% {background-position:  -755px -151px;}
+  59% {background-position:  -906px -151px;}
+  62% {background-position:  -1057px -151px;}
+
+  65% {background-position:    0px -302px;}
+  67% {background-position:  -151px -302px;}
+  70% {background-position:  -302px -302px;}
+  73% {background-position:  -453px -302px;}
+  76% {background-position:   -604px -302px;}
+  79% {background-position:  -755px -302px;}
+  82% {background-position:  -906px -302px;}
+  85% {background-position:  -1057px -302px;}
+
+  88% {background-position:    0px -453px;}
+  91% {background-position:  -151px -453px;}
+  94% {background-position:  -302px -453px;}
+  97% {background-position:  -453px -453px;}
+  100% {background-position:   -604px -453px;}
+}
+
+.text {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: text 10s linear infinite;
+}
+
+.text:hover {
+  animation-play-state: paused;
+}
+
+@keyframes text {
+  from {text-indent: 100%}
+  to {text-indent: -100%}
 }
